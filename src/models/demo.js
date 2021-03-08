@@ -10,12 +10,12 @@ const schema = new mongoose.Schema(
     name: {
       type: String,
       unique: true,
-      required: [true, "分类 name 必填"],
+      required: [true, "name 必填"],
     },
     value: {
       type: String,
       unique: true,
-      required: [true, "分类 value 必填"],
+      required: [true, "value 必填"],
     },
     rank: {
       type: Number,

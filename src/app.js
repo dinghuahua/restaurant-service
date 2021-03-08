@@ -22,8 +22,10 @@ app.use(
       formidable: {
         // 设置文件上传目录
         uploadDir: path.join(__dirname, "public/upload/"),
-        keepExtensions: true, // 保持文件的后缀
-        maxFieldsSize: 2 * 1024 * 1024, // 文件上传大小
+        // 保持文件的后缀
+        keepExtensions: true,
+        // 文件上传大小
+        maxFieldsSize: 2 * 1024 * 1024,
         onFileBegin: (name, file) => {
           // 文件上传前的设置
           console.log(`name: ${name}`);

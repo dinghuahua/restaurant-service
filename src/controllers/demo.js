@@ -4,9 +4,7 @@ const tool = require("../../utils/tool");
 const ApiError = require("../error/api_error");
 const ApiErrorNames = require("../error/api_error_name");
 
-/**
- * 查询
- */
+
 /**
  * 查询
  */
@@ -14,6 +12,9 @@ exports.find = async (ctx) => {
   ctx.body = "hello world";
 };
 
+/**
+ * 查询
+ */
 // exports.find = async (ctx) => {
 //   let result;
 //   const reqQuery = ctx.query;
@@ -106,8 +107,7 @@ exports.update = async (ctx) => {
  */
 exports.delete = async (ctx) => {
   const ctxParams = ctx.params;
-  // 合并 路由中的参数 以及 发送过来的参数
-  // 路由参数 以及发送的参数可能都有 id 以 发送的 id 为准，如果没有，取路由中的 id
+  // 合并参数
   const dataObj = { ...ctxParams, ...ctx.request.body };
   if (!tool.validatorsFun.numberAndCharacter(dataObj.id)) {
     throw new ApiError(ApiErrorNames.LEGAL_ID);
