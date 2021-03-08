@@ -1,4 +1,4 @@
-# restaurant-service
+# restaurant
 
 ## restaurant 环境
 1. node v10.14.1 

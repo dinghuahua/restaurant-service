@@ -1,0 +1,23 @@
+{
+  "restartable": "rs",
+  "ignore": [""],
+  "verbose": true,
+  "execMap": {
+    "": "node"
+  },
+  "events": {
+    "start": "gulp",
+    "crash": "",
+    "exit": "",
+    "restart": "gulp"
+  },
+  "ext": "jsjson",
+  "watch": [
+    "./src/**"
+  ],
+  "env": {
+    "NODE_ENV": "env",
+    "PORT": "8000"
+  },
+  "legacy-watch": false
+}
